@@ -50,14 +50,20 @@ print(max_n(1,2,3))
 print("\nSoit la chaine de caractères suivantes, calculez le nombre de i, puis le nombre de chaque lettre.")
 mississippi='Mississippi'
 print("nombre de i:",sum(1 if c=='i' else 0 for c in mississippi))
-nombre_de_chaque_lettres = {}
+
+letters = {}
 for c in mississippi :
-    c = c.lower()
-    if c not in nombre_de_chaque_lettres.keys():
-        nombre_de_chaque_lettres[c] = 1
-    else : 
-        nombre_de_chaque_lettres[c] += 1
-print("nombre de chaque lettres",nombre_de_chaque_lettres)
+    if c not in letters.keys() :
+        letters[c] = 1
+    else :
+        letters[c] += 1
+print("nombre de chaque lettres",letters)
 
-
-
+to_replace = max(letters)
+mieeieeippi = ''
+for c in mississippi :
+    if c==to_replace :
+        mieeieeippi += 'e'
+    else :
+        mieeieeippi += c
+print("je remplace une des lettre qui revient le plus par 'e'",mieeieeippi)
