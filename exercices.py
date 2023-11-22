@@ -2,7 +2,6 @@ import random as r
 l = [0, 1, 100, 4, 9, 16, 25, 36, 49, 64, 81]   
 # Cette fonction mélangera les éléments
 r.shuffle(l)
-
 # EXERCICE 001 Permutation
 print("\1. Soit a = 1, b = 3 permuter les valeurs de ces deux variables à l'aide script")
 a=1
@@ -31,12 +30,10 @@ print(table_multiplication(9))
 
 # EXERCICE 004
 print("\nRegrouper les éléments d'une liste par binomes (trinome pour le dernier groupe si la liste est impaire)")
-def liste_binome(l):
-    return [l[n:n+3] if(n+3==len(l)) else l[n:n+2] for n in range(0,len(l)-1,2)]
-
-print(liste_binome(list(l)))
+group_by_d = lambda l,d: [l[i:len(l)] if len(l) -i-d < d else l[i:i+d] for i in range(0,len(l)-d+1,d)]
+print(group_by_d(l,2))
 # EXERCICE 005
-print("\nCréez une fonction qui calcul le max de 2 valeurs, puis trois valeurs. Et facultatif N valeurs.")
+print("\nCréez une fonction qui calcul le max de n valeurs, puis trois valeurs. Et facultatif N valeurs.")
 def max_n(*numbers):
     max = numbers[0]
     for n in numbers:
