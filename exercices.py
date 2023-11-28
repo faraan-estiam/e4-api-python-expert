@@ -58,8 +58,9 @@ print(grouper_par_binome(list(range(7))))
 print(grouper_par_binome(list(range(6))))
 
 # fonction généralisée pour faire des groupes de toutes taille et sur une ligne :
-# group_by_d = lambda l,d: [l[i:len(l)] if len(l) -i-d < d else l[i:i+d] for i in range(0,len(l)-d+1,d)]
-# print(group_by_d(l,2))
+print("Bonus:")
+group_by_d = lambda l,d: [l[i:len(l)] if len(l)-i < 2*d else l[i:i+d] for i in range(0,len(l)+1-d,d)]
+print(group_by_d(l,3))
 
 # EXERCICE 005 Max
 print("\nCréez une fonction qui calcul le max de 2 valeurs, puis trois valeurs. Et facultatif N valeurs.")
